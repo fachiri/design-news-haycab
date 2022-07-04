@@ -9,3 +9,11 @@
 .navbarListBtn {
     border: 1px solid #dc3545;
 }
+
+.scrollingWrapper .card {
+    width: 12rem;
+}
+
+.scrollingWrapper .card img {
+    height: 6rem;
+}
