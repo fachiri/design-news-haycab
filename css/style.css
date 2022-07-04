@@ -28,6 +28,10 @@ a {
     background-color: #0000001e;
 }
 
+i.text-yellow {
+    color: #ffff00;
+}
+
 /* styles */
 
 .navbar-brand img {
@@ -70,14 +74,13 @@ a {
     padding-bottom: 3rem;
 }
 
-.newsList {
+.newsList, .categoryContent {
     position: relative;
 }
 
-.scrollingWrapper {
+.scrollingWrapper, .slider2 {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: hidden;
 }
 
 /* .newsList .leftShadow {
@@ -146,4 +149,21 @@ a.tagNews {
     cursor: grabbing;
     cursor: -webkit-grabbing;
     transform: scale(1);
-  }
+}
+
+.categoryContent .card {
+    width: 16.5rem;
+}
+
+.categoryContent .card img {
+    border-radius: .5rem;
+}
+
+.categoryContent .card .tagNews {
+    color: #e73030;
+}
+
+.categoryContent .card .dateNews{
+    color: rgba(0, 0, 0, 0.5);
+}
+

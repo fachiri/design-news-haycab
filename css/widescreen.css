@@ -16,9 +16,7 @@
     width: 75px;
 }
 
-.scrollingWrapper {
-    display: flex;
-    flex-wrap: nowrap;
+.scrollingWrapper, .slider2 {
     overflow-x: hidden;
 
     transition: all 0.2s;

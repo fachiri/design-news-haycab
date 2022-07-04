@@ -16,8 +16,6 @@
 }
 
 .scrollingWrapper {
-    display: flex;
-    flex-wrap: nowrap;
     overflow-x: scroll;
 }
 
@@ -31,7 +29,7 @@
 }
 
 .scrollingWrapper .card .tagNews {
-    font-size: .8rem;
+    font-size: .75rem;
 }
 
 .scrollingWrapper .card .titleNews {
@@ -40,10 +38,14 @@
 }
 
 .scrollingWrapper .card .dateNews {
-    font-size: .8rem;
+    font-size: .75rem;
 }
 
 .scrollingWrapper .card img {
     height: 5.5rem;
     border-radius: .3rem;
+}
+
+footer p, .copyright {
+    font-size: .8rem;
 }
