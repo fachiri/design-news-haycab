@@ -11,9 +11,9 @@
 }
 
 .scrollingWrapper .card {
-    width: 3rem;
+    width: 10rem;
 }
 
 .scrollingWrapper .card img {
-    height: 1rem;
+    height: 5rem;
 }
