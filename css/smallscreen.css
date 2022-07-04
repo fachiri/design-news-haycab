@@ -1,0 +1,11 @@
+.navbarSearchBtn {
+    display: none;
+}
+
+.offcanvas-body ul{
+    width: 100%;
+}
+
+.navbarListBtn {
+    border: 1px solid #dc3545;
+}

@@ -1,0 +1,17 @@
+.navbarSearchInput {
+    display: none;
+}
+
+.navbarSearchBtn {
+    color: #dc3545;
+}
+
+.offcanvas-body {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navbarListBtn {
+    width: 75px;
+}

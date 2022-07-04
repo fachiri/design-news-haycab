@@ -1,0 +1,89 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    width: auto;
+    height: 1.7rem;
+}
+
+.secondNavbar {
+    background-color: #e73030;
+}
+
+.mainBanner {
+    position: relative;
+    overflow: hidden;
+    background-color: #fe0000;
+}
+
+.mainBannerImg{
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto 17rem; /* +- 288px */
+}
+
+.mainBannerOverlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.mainBannerContent {
+    padding-top: 18rem;
+}
+
+.mainNews {
+    color: #fff;
+    background-image: linear-gradient(to bottom,#e73030, #c30706);
+    box-shadow: 0px -15px 30px 20px #e73030;
+    height: 100%;
+}
+
+.scrollingWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+
+    /* box-shadow: 10px 0px 30px 20px #3033e7 inset; */
+}
+
+.newsList .leftShadow {
+    position: absolute;
+    height: 15.5rem;
+    width: 5rem;
+    background-image: linear-gradient(to bottom right,#d01515, #c3060600);
+    z-index: 9999;
+}
+
+.scrollingWrapper .card {
+    flex: 0 0 auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+}
+
+.scrollingWrapper .card img {
+    height: 9rem;
+}
+
+.scrollingWrapper.active {
+    /* background: rgba(255, 255, 255, 0.3); */
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+  }
