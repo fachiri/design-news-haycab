@@ -64,11 +64,10 @@ a {
     overflow-x: hidden;
 }
 
-.newsList .leftShadow {
+/* .newsList .leftShadow {
     position: absolute;
     height: 15.5rem;
     width: 2rem;
-    /* background-image: linear-gradient(to bottom,#d01515, #c3060600); */
     background-color: #e73030;
     box-shadow: 10px -2px 18px 10px #e73030;
     z-index: 9999;
@@ -79,11 +78,10 @@ a {
     height: 15.5rem;
     right: 0;
     width: 2rem;
-    /* background-image: linear-gradient(to bottom,#d01515, #c3060600); */
     background-color: #e73030;
     box-shadow: -10px -2px 18px 10px #e73030;
     z-index: 9999;
-}
+} */
 
 .scrollingWrapper .card {
     flex: 0 0 auto;
