@@ -41,7 +41,6 @@ a {
 
 .mainBannerContent {
     padding-top: 18rem;
-    padding-bottom: 30px;
 }
 
 .mainHeadline a{
@@ -52,7 +51,7 @@ a {
     color: #fff;
     background-image: linear-gradient(to bottom,#e73030, #ce2121);
     box-shadow: 0px -15px 30px 20px #e73030;
-    /* height: 150%; */
+    padding-bottom: 4rem;
 }
 
 .newsList {
