@@ -15,3 +15,14 @@
 .navbarListBtn {
     width: 75px;
 }
+
+.scrollingWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+
+    transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+    user-select: none;
+}

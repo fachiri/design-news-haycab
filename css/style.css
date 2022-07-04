@@ -55,21 +55,14 @@ a {
     /* height: 150%; */
 }
 
+.newsList {
+    position: relative;
+}
+
 .scrollingWrapper {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;
-
-    transition: all 0.2s;
-    transform: scale(0.98);
-    will-change: transform;
-    user-select: none;
-
-    /* box-shadow: 10px 0px 30px 20px #3033e7 inset; */
-}
-
-.newsList {
-    position: relative;
 }
 
 .newsList .leftShadow {
