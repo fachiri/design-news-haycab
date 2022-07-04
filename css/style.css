@@ -14,6 +14,22 @@ a {
     text-decoration: none;
 }
 
+/* custom bootstrap */
+.navbar-toggler {
+    border: none;
+    padding-top: .35rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler:active, .btn-close:active {
+    background-color: #0000001e;
+}
+
+/* styles */
+
 .navbar-brand img {
     width: auto;
     height: 1.7rem;

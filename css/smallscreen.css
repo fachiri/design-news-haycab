@@ -10,8 +10,9 @@
     border: 1px solid #dc3545;
 }
 
+
 .mainBannerContent {
-    padding-top: 22rem;
+    padding-top: 16rem;
 }
 
 .scrollingWrapper {
@@ -45,8 +46,4 @@
 .scrollingWrapper .card img {
     height: 5.5rem;
     border-radius: .3rem;
-}
-
-.mainBannerContent {
-    padding-top: 12rem;
 }
