@@ -12,8 +12,31 @@
 
 .scrollingWrapper .card {
     width: 10rem;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.scrollingWrapper .card .card-body {
+    padding-left: .2rem;
+}
+
+.scrollingWrapper .card .tagNews {
+    font-size: .6rem;
+}
+
+.scrollingWrapper .card .titleNews {
+    font-size: .8rem;
+    line-height: 1.2;
+}
+
+.scrollingWrapper .card .dateNews {
+    font-size: .6rem;
 }
 
 .scrollingWrapper .card img {
-    height: 5rem;
+    height: 5.5rem;
+    border-radius: .3rem;
+}
+
+.mainBannerContent {
+    padding-top: 12rem;
 }
