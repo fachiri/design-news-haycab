@@ -49,3 +49,12 @@
 footer p, .copyright {
     font-size: .8rem;
 }
+
+.mainContent img {
+    height: 13rem;
+    width: 100%;
+}
+
+.categoryName p {
+    font-size: 1rem !important;
+}
