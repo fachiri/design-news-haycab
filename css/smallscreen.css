@@ -15,7 +15,7 @@
     padding-top: 16rem;
 }
 
-.scrollingWrapper {
+.scrollingWrapper, .slider2 {
     overflow-x: scroll;
 }
 

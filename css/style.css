@@ -167,3 +167,27 @@ a.tagNews {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.cardStory {
+    /* width: 7rem; */
+    padding: 2px;
+}
+
+.rainbow-box {
+    background-image: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    padding: 2px;
+    padding-bottom: 6px;
+    border-radius: 10px;
+  }
+
+.cardStory .bg-dark {
+    border-radius: .4rem;
+    margin: 2px;
+    outline: 2.5px solid #fff;
+}
+
+.cardStory img{
+    border-radius: .4rem;
+    width: 7rem;
+    height: 13rem;
+    opacity: .8;
+}

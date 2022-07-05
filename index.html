@@ -155,71 +155,13 @@
           <p class="fs-5 text-uppercase fw-bold"><i class="fa-solid fa-tag me-2 text-danger"></i>Story haycab</p>
         </div>
         <div class="categoryContent">
-          <div class="scrollingWrapper slider2">
-            <div class="card mx-2">
-              <img src="assets/news5.jpeg" class="card-img-top" alt="assets/news1.jpeg">
-              <div class="card-body px-1">
-                <a href="#" class="tagNews">Ini Tag News</a>
-                <a href="#" class="card-text titleNews text-dark">Some quick example text to build on the card title.</a>
-                <p class="dateNews">20 Juni 2022</p>
+          <div class="scrollingWrapper slider2" id="story">
+            <a href="#" class="cardStory rainbow-box">
+              <div class="bg-dark h-100">
+                <img src="assets/news5.jpeg" alt="cardStoryImg">
               </div>
-            </div>
-            <div class="card mx-2">
-              <img src="assets/news2.jpeg" class="card-img-top" alt="assets/news2.jpeg">
-              <div class="card-body px-1">
-                <a href="#" class="tagNews">Ini Tag News</a>
-                <a href="#" class="card-text titleNews text-dark">Some quick example text to build on the card title.</a>
-                <p class="dateNews">20 Juni 2022</p>
-              </div>
-            </div>
-            <div class="card mx-2">
-              <img src="assets/news3.jpeg" class="card-img-top" alt="assets/news1.jpeg">
-              <div class="card-body px-1">
-                <a href="#" class="tagNews">Ini Tag News</a>
-                <a href="#" class="card-text titleNews text-dark">Some quick example text to build on the card title.</a>
-                <p class="dateNews">20 Juni 2022</p>
-              </div>
-            </div>
-            <div class="card mx-2">
-              <img src="assets/news4.jpeg" class="card-img-top" alt="assets/news2.jpeg">
-              <div class="card-body px-1">
-                <a href="#" class="tagNews">Ini Tag News</a>
-                <a href="#" class="card-text titleNews text-dark">Some quick example text to build on the card title.</a>
-                <p class="dateNews">20 Juni 2022</p>
-              </div>
-            </div>
-            <div class="card mx-2">
-              <img src="assets/news1.jpeg" class="card-img-top" alt="assets/news1.jpeg">
-              <div class="card-body px-1">
-                <a href="#" class="tagNews">Ini Tag News</a>
-                <a href="#" class="card-text titleNews text-dark">Some quick example text to build on the card title.</a>
-                <p class="dateNews">20 Juni 2022</p>
-              </div>
-            </div>
-            <div class="card mx-2">
-              <img src="assets/news2.jpeg" class="card-img-top" alt="assets/news2.jpeg">
-              <div class="card-body px-1">
-                <a href="#" class="tagNews">Ini Tag News</a>
-                <a href="#" class="card-text titleNews text-dark">Some quick example text to build on the card title.</a>
-                <p class="dateNews">20 Juni 2022</p>
-              </div>
-            </div>
-            <div class="card mx-2">
-              <img src="assets/news3.jpeg" class="card-img-top" alt="assets/news1.jpeg">
-              <div class="card-body px-1">
-                <a href="#" class="tagNews">Ini Tag News</a>
-                <a href="#" class="card-text titleNews text-dark">Some quick example text to build on the card title.</a>
-                <p class="dateNews">20 Juni 2022</p>
-              </div>
-            </div>
-            <div class="card mx-2">
-              <img src="assets/news4.jpeg" class="card-img-top" alt="assets/news2.jpeg">
-              <div class="card-body px-1">
-                <a href="#" class="tagNews">Ini Tag News</a>
-                <a href="#" class="card-text titleNews text-dark">Some quick example text to build on the card title.</a>
-                <p class="dateNews">20 Juni 2022</p>
-              </div>
-            </div>
+            </a>
+            <div id="lastStory"></div>
           </div>
         </div>
       </div>
@@ -433,6 +375,7 @@
       </div>
       </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const slider1 = document.querySelector('.slider1');
@@ -486,7 +429,31 @@
         slider2.scrollLeft = scrollLeft - walk;
         // console.log(slider2.scrollLeft);
       });
-      
+
+      // handle instagram api
+      const section_story = document.getElementById("story");
+      const last_story = document.getElementById("lastStory");
+      const access_token = "EAAJZB3QISeZBkBALX4HqyctvZBeBCDkFzU5Ht8xenf9dtYxLT7Kg7BbWUfvRvuwvommUv6aEyfUOiT4AZBSyLQa91aXIvVTR87EtS1dEZCobTvGVqCfX07A1TvhQ5PaJrYZB8xcHSdPMRqA1W6G3Toe9BZARsDwyY54lgGr27fw8vHikdvNOIcMjKa3s9HNqLTZBefXE9CftCZAgAbisFfdY6kQXHWfsGFlBKKBhAqZBKgwd2rZBZC4NnGa3";
+      fetch("https://graph.facebook.com/v14.0/17841439043580057/stories?access_token="+access_token+"")
+        .then(response => response.json())
+        .then(result => {
+          // console.log(result);
+          for (let i = 0; i < result.data.length; i++) {
+            let id_story = result.data[i].id
+            fetch("https://graph.facebook.com/v14.0/"+id_story+"?fields=id%2Cig_id%2Cmedia_product_type%2Cmedia_type%2Cmedia_url%2Cowner%2Cpermalink%2Cshortcode%2Ctimestamp%2Cusername&access_token="+access_token+"")
+              .then(response => response.json())
+              .then(data_story => {
+                // console.log(data_story);
+                let content =
+                  '<a href="'+data_story.permalink+'" class="cardStory rainbow-box ms-2" target="_blank">' +
+                    '<div class="bg-dark h-100">' +
+                      '<img src="'+data_story.media_url+'" alt="cardStoryImg">' +
+                    '</div>'+
+                  '</a>';
+                $(content).insertBefore("#lastStory");
+              });
+          }
+        });
     </script>
   </body>
 </html>
