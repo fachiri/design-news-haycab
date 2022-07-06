@@ -58,3 +58,25 @@ footer p, .copyright {
 .categoryName p {
     font-size: 1rem !important;
 }
+
+.listCategory .card{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+.listCategory img{
+    width: 40%;
+    height: 7rem;
+}
+
+.listCategory .card-body {
+    width: 60%;
+    height: 7rem;
+    margin-left: .5rem;
+    padding-top: .5rem;
+}
+
+.listCategory .card-body .tagNews, .listCategory .card-body .dateNews{
+    font-size: .8rem;
+}
