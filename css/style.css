@@ -21,8 +21,11 @@ a {
     padding-top: .35rem;
 }
 
-.navbar-toggler:focus, .btn-close:focus {
+.navbar-toggler:focus, .btn-close:focus, .form-control:focus {
     box-shadow: none;
+}
+.form-control:focus {
+    border-color: #e73030;
 }
 
 .navbar-toggler:active, .btn-close:active {
@@ -31,6 +34,10 @@ a {
 
 i.text-yellow {
     color: #ffff00;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 /* styles */

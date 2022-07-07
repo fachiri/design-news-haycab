@@ -2,6 +2,10 @@
     display: none;
 }
 
+.navbarSearchInput {
+    margin-bottom: .8rem;
+}
+
 .offcanvas-body ul{
     width: 100%;
 }
